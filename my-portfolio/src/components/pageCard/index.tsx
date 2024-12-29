@@ -33,12 +33,19 @@ interface CardProps {
     imageSrc?: string | StaticImageData;
 	cardLetter: string;
 	cardLabel: string;
+    width?: number;
+    height?: number;
+    position?: 'static' | 'relative' | 'absolute' | 'fixed' | 'sticky';
+    top?: number | string;
+    left?: number | string;
+    scale?: number;
 }
 
-const Card: React.FC<CardProps> = ({ imageSrc, cardLetter, cardLabel }) => {
+const Card: React.FC<CardProps> = ({ imageSrc, cardLetter, cardLabel, width, height, top, left, scale = 1 }) => {
     return (
+        <div style={{ transform: `scale(${scale})`, transformOrigin: 'top left', position: 'relative', top, left }}>
         <Tilt options={defaultOptions}>
-            <div className={styles.rectangleParent}>
+            <div className={styles.rectangleParent} style={{ width, height }}>
       			<div className={styles.imageContainer}>
                     <Image
                      src={imageSrc as string | StaticImageData}
@@ -56,6 +63,7 @@ const Card: React.FC<CardProps> = ({ imageSrc, cardLetter, cardLabel }) => {
       			<div className={styles.barcodeTitle}>{ cardLabel }</div>
     		</div>
         </Tilt>
+        </div>
     );
 }
 
