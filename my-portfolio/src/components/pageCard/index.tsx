@@ -67,22 +67,4 @@ const Card: React.FC<CardProps> = ({ imageSrc, cardLetter, cardLabel, width, hei
     );
 }
 
-/*
-<div className="relative w-64 h-80 bg-white
-            bg-opacity-20 backdrop-filter backdrop-blur-lg
-            shadow-md rounded-xl overflow-hidden">
-                <img src={image} alt={title}
-                className="w-full h-48 object-cover" />
-                <div className="absolute bottom-0 left-0
-                right-0 p-4 text-white">
-                    <h2 className="text-xl font-bold mb-2">
-                        {title}
-                    </h2>
-                    <p className="text-gray-200">
-                        {description}
-                    </p>
-                </div>
-            </div>
-*/
-
 export default Card;

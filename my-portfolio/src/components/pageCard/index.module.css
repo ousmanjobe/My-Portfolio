@@ -25,16 +25,19 @@
 }
 .descriptionSection {
     position: absolute;
-    height: 238px;
+    height: 14.875rem;
     width: 100%;
     top: 65.95%;
     right: 0%;
     bottom: 0%;
     left: 0%;
     border-radius: 0px 0px 44px 44px;
-    background-color: #5b5b5b;
+    background-color: #3f4763;
     aspect-ratio: 16 / 9;
 }
+/*
+Original description section color: #5b5b5b
+*/
 .letterCircle {
     position: absolute;
     height: 24%;
@@ -53,15 +56,16 @@
     left: 11.71%;
     display: inline-block;
     aspect-ratio: 1 / 1;
+    color: #48bfff;
 }
 .barcodeTitle {
     position: absolute;
     text-align: right;
     height: 3.86%;
-    width: 39.34%;
-    top: 96.28%;
+    width: 49.34%;
+    top: 94.28%;
     right: 8%;
-    font-size: 2.0rem;
+    font-size: 2.4rem;
     letter-spacing: 0.04em;
     font-family: 'Libre Barcode 39 Text';
     display: inline-block;
@@ -74,7 +78,7 @@
     position: relative;
     height: 39.313rem;
     aspect-ratio: 469 / 629;
-    text-align: left;
+    text-align: center;
     font-size: 128px;
     color: #fff;
     font-family: Kalam;

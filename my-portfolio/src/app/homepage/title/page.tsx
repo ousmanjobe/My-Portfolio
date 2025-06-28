@@ -1,10 +1,19 @@
+import Link from 'next/link';
+
 import Card from "@/components/pageCard";
-import imgProject from "@/images/projectCover.jpg";
-import imgAboutMe from "@/images/mePhoto1.png";
-import imgLinkedIn from "@/images/linkedinLogo.png";
-import imgGmail from "@/images/gmailLogo.png";
-import imgInstagram from "@/images/instagramLogo.png";
-import imgSketches from "@/images/sketches.png";
+
+//import imgProject from "@/images/projectCover.jpg";
+//import imgAboutMe from "@/images/mePhoto1.png";
+import imgLinkedIn from "/public/images/linkedinLogo.png";
+//import imgGmail from "@/images/gmailLogo.png";
+import imgOutlook from "/public/images/outlook.png";
+import imgInstagram from "/public/images/instagramLogo.png";
+import imgSketches from "/public/images/sketches.png";
+import imgDesignCore from "/public/images/designCore.jpg";
+import imgProjects from "/public/images/projects.jpg";
+
+//import imgMe1 from "@/images/me1.jpg";
+import imgMe2 from "/public/images/me2.jpg";
 
 export default function TitlePage(){
     return (
@@ -14,22 +23,37 @@ export default function TitlePage(){
               Ousman Jobe
             </h1>
           </section>
+
           <section className="flex items-center justify-center min-h-screen">
-            <Card imageSrc={imgProject} cardLetter="P" cardLabel="Projects" />
+            <Card imageSrc={imgMe2} cardLetter="A" cardLabel="About Me" />
           </section>
+
           <section className="flex items-center justify-center min-h-screen">
-            <Card imageSrc={imgAboutMe} cardLetter="A" cardLabel="About Me" />
+            <Link href="/homepage/projects">
+                <Card imageSrc={imgProjects} cardLetter="P" cardLabel="Projects" />
+            </Link>
           </section>
+         
           <section className="flex items-center justify-center min-h-screen">
-            <Card cardLetter="D" cardLabel="Design Core" />
+            <Card imageSrc={imgDesignCore} cardLetter="D" cardLabel="Design Core" />
           </section>
+
           <section className="flex items-center justify-center min-h-screen">
             <Card imageSrc={imgSketches} cardLetter="S" cardLabel="Sketches" />
           </section>
-          <section className="flex flex-col lg:flex-row items-center justify-between min-h-screen">
-            <Card imageSrc={imgGmail} cardLetter="E" cardLabel="Gmail" />
-            <Card imageSrc={imgLinkedIn} cardLetter="L" cardLabel="LinkedIn" />
+
+          <section className="flex flex-col lg:flex-row items-center space-x-8 justify-between min-h-screen">
+            <a href="mailto:jobe.o@northeastern.edu">
+                <Card imageSrc={imgOutlook} cardLetter="E" cardLabel="Email" />
+            </a>
+
+            <a href="https://www.linkedin.com/in/jobe-ousman" target="_blank" rel="noopener noreferrer">
+                <Card imageSrc={imgLinkedIn} cardLetter="L" cardLabel="LinkedIn" />
+            </a>
+
+            <a href="https://www.instagram.com/lounge_tales/profilecard/?igsh=NXl1cnl5M3RlaWRs" target="_blank" rel="noopener noreferrer">
             <Card imageSrc={imgInstagram} cardLetter="I" cardLabel="Instagram" />
+            </a>
           </section>
           
         </div>

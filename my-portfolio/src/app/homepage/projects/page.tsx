@@ -1,4 +1,16 @@
+import Link from 'next/link';
+
 import Card from "@/components/pageCard";
+import MiniCard from "@/components/miniCard";
+
+import imgSoftware from "/public/images/software.jpg";
+import imgPhotography1 from "/public/images/photography1.jpg";
+import imgPhotography2 from "/public/images/photography2.jpg";
+import imgFeatured from "/public/images/featured.jpg";
+import imgFeatured2 from "/public/images/featured2.jpg";
+import imgArtwork from "/public/images/artwork.jpg";
+import imgUXUI1 from "/public/images/uxui.jpg";
+import imgUXUI2 from "/public/images/uxui2.jpg";
 
 export default function ProjectsPage(){
     return (
@@ -8,33 +20,37 @@ export default function ProjectsPage(){
                     Projects
                 </h1>
             </section>
-            <section className=" ">
-                <p>Test text</p>
+            <section className="flex items-center justify-center min-h-screen">
                 {/* Container for both grids */}
-                <div className="flex gap-10  max-w-screen-lg">
+                <div className="flex gap-9  max-w-screen-lg">
                     {/* First grid with one column and one row */}
-                    <div className="auto-cols-auto border border-gray-300" style={{ width: 'auto', height: '39.313rem' }}>
-                        <div className="border border-gray-300">
-                            <Card cardLetter="F" cardLabel="Featured" />
+                    <div className="auto-cols-auto">
+                        <div>
+                            <Card imageSrc={imgFeatured2} cardLetter="F" cardLabel="Featured" />
                         </div>
                     </div>
                     {/* Second grid with two columns and two rows */}
-                    <div className="grid grid-cols-[auto,auto] gap-20 border border-gray-300" style={{ transform: 'scale(0.48)', transformOrigin: 'top left' }}>
-                        <div className="border border-gray-300">
-                            <Card cardLetter="U" cardLabel="UX/UI" />
+                    <div className="grid grid-cols-[auto,auto] gap-9">
+                        <div>
+                            <Link href="/projectPages/uxui">
+                                <MiniCard imageSrc={imgUXUI1} cardLetter="U" cardLabel="UX/UI" />
+                            </Link>
                         </div>
-                        <div className="border border-gray-300">
-                            <Card cardLetter="3" cardLabel="3D Design" />
+                        <div>
+                            <Link href="/projectPages/software">
+                                <MiniCard imageSrc={imgSoftware} cardLetter="S" cardLabel="Software" />
+                            </Link>
                         </div>
-                        <div className="border border-gray-300">
-                            <Card cardLetter="S" cardLabel="Software" />
+                        <div>
+                            <Link href="/projectPages/artwork">
+                                <MiniCard imageSrc={imgArtwork} cardLetter="A" cardLabel="Artwork" />
+                            </Link>
                         </div>
-                        <div className="border border-gray-300">
-                            <Card cardLetter="A" cardLabel="Artwork" />
+                        <div>
+                            <MiniCard imageSrc={imgPhotography1} cardLetter="P" cardLabel="Photography" />
                         </div>
                     </div>
                 </div>
-                <p>Test text 2 huh</p>
             </section>
         </div>
     );
