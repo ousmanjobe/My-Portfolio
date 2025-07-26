@@ -1,0 +1,31 @@
+
+  
+
+  
+  .textScrambleContent {
+    font-size: max(13rem, min(5.69579vw + 0.665049rem, 10rem));
+    
+    justify-content: center;
+    line-height: 1;
+    margin-top: max(2rem, min(2.0712vw + 1.51456rem, 4rem));
+    padding-bottom: 1em;
+    position: relative;
+  }
+  
+  .textScrambleText {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .textScrambleText span {
+    word-break: break-word;
+  }
+  
+  .textScrambleText img {
+    display: inline-block;
+    height: 0.9em;
+    width: auto;
+  }

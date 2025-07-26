@@ -1,3 +1,4 @@
+'use client';
 import Link from 'next/link';
 
 import Card from "@/components/pageCard";
@@ -15,17 +16,57 @@ import imgProjects from "/public/images/projects.jpg";
 //import imgMe1 from "@/images/me1.jpg";
 import imgMe2 from "/public/images/me2.jpg";
 
+import InfiniteText from '@/components/infiniteTextMoveOnScroll';
+import ScrambleText from '@/components/ScrambleText';
+
+import { AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
+
+import Preloader from '@/components/preloaderCurve';
+
 export default function TitlePage(){
-    return (
-        <div className="flex flex-col items-center justify-center min-h-screen">
-          <section className="flex items-center justify-center min-h-screen">
-            <h1 className="text-center text-[220px]">
+  /*
+  <h1 className="text-center text-[220px]">
               Ousman Jobe
             </h1>
+  */
+  const preloadWords: string[] = ["Welcome",];
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+  
+      // Initialize LocomotiveScroll
+      const locomotiveScroll = new LocomotiveScroll();
+  
+      setTimeout(() => {
+        setIsLoading(false); // Ensure `setIsLoading` is properly typed in your component
+        document.body.style.cursor = 'default';
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
+  
+  const texts = [
+    'Ousman',
+    'Jobe',
+  ];
+    return (
+        <div className="flex flex-col items-center justify-center min-h-screen">
+          <AnimatePresence mode='wait'>
+            {isLoading && <Preloader words={preloadWords} />}
+          </AnimatePresence>
+          
+          <section className="flex items-center justify-center min-h-screen">
+            <ScrambleText texts={texts} />
           </section>
 
           <section className="flex items-center justify-center min-h-screen">
-            <Card imageSrc={imgMe2} cardLetter="A" cardLabel="About Me" />
+            <Link href="/homepage/aboutMe">
+                <Card imageSrc={imgMe2} cardLetter="A" cardLabel="About Me" />
+            </Link>
           </section>
 
           <section className="flex items-center justify-center min-h-screen">

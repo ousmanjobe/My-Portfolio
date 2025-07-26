@@ -1,3 +1,7 @@
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-share.css');
+
 .main{
     margin-top: 5vh;
     color: white;
@@ -5,8 +9,44 @@
   
     h1{
       padding: 20px;
-      font-size: 5vw; 
+      font-size: 8vw; 
+      max-width: 90%;
+      font-weight: 400;
+    }
+
+    h2{
+      padding: 20px;
+      font-size: 3vw; 
       max-width: 80%;
       font-weight: 400;
+    }
+    .photoAlbum {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 16px;
+    }
+    
+    .photoAlbum .photo {
+      display: block;
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    
+    .photoAlbum .photo:hover {
+      transform: scale(1.05);
+    }
+    
+    @media (max-width: 768px) {
+      .photoAlbum {
+        gap: 12px;
+        padding: 8px;
+      }
     }
   }

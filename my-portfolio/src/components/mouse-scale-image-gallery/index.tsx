@@ -13,9 +13,10 @@ interface Project {
 interface DoubleImageProps {
   projects: [Project, Project]; // Expect exactly two projects
   reversed?: boolean;
+  objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down'; // Optional prop for object-fit
 }
 
-export default function DoubleImage({ projects, reversed = false }: DoubleImageProps) {
+export default function DoubleImage({ projects, reversed = false, objectFit = 'cover' }: DoubleImageProps) {
   const firstImage = useRef<HTMLDivElement>(null);
   const secondImage = useRef<HTMLDivElement>(null);
   let requestAnimationFrameId: number | null = null;
@@ -66,7 +67,7 @@ export default function DoubleImage({ projects, reversed = false }: DoubleImageP
     <div onMouseMove={manageMouseMove} className={styles.double}>
       <div ref={firstImage} className={styles.imageContainer}>
         <div className={styles.stretchyWrapper}>
-          <Image src={`/images/${projects[0].src}`} fill={true} alt="image" />
+          <Image src={`/images/${projects[0].src}`} fill={true} alt="image" style={{ objectFit }}/>
         </div>
         <div className={styles.body}>
           <h3 className='avenirNextFont'>{projects[0].name}</h3>
@@ -77,7 +78,7 @@ export default function DoubleImage({ projects, reversed = false }: DoubleImageP
 
       <div ref={secondImage} className={styles.imageContainer}>
         <div className={styles.stretchyWrapper}>
-          <Image src={`/images/${projects[1].src}`} fill={true} alt="image" />
+          <Image src={`/images/${projects[1].src}`} fill={true} alt="image" style={{ objectFit }}/>
         </div>
         <div className={styles.body}>
           <h3 className='avenirNextFont'>{projects[1].name}</h3>
