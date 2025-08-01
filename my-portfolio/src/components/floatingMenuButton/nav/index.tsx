@@ -25,14 +25,17 @@ const navItems: NavItem[] = [
     title: "Projects",
     href: "/homepage/projects",
   },
+  /*
   {
     title: "Design Core",
     href: "/designcore",
   },
+    
   {
     title: "Sketches",
     href: "/contact",
   },
+  */
 ];
 
 export default function Index() {

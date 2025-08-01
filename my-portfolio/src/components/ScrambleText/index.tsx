@@ -59,7 +59,7 @@ const ScrambleText: React.FC<ScrambleTextProps> = ({ texts }) => {
           chars: scrambleChars,
           speed: scrambleSpeed,
         },
-        duration: 2,
+        duration: 3,
       });
     });
 

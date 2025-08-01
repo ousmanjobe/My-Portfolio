@@ -10,6 +10,7 @@ import imgLinkedIn from "/public/images/linkedinLogo.png";
 import imgOutlook from "/public/images/outlook.png";
 import imgInstagram from "/public/images/instagramLogo.png";
 import imgSketches from "/public/images/sketches.png";
+import imgSketchesCover from "/public/images/SketchesCoverImage.jpg"
 import imgDesignCore from "/public/images/designCore.jpg";
 import imgProjects from "/public/images/projects.jpg";
 
@@ -50,8 +51,7 @@ export default function TitlePage(){
   }, []);
   
   const texts = [
-    'Ousman',
-    'Jobe',
+    'Ousman Jobe',
   ];
     return (
         <div className="flex flex-col items-center justify-center min-h-screen">
@@ -75,15 +75,20 @@ export default function TitlePage(){
             </Link>
           </section>
          
+         {/*
           <section className="flex items-center justify-center min-h-screen">
             <Card imageSrc={imgDesignCore} cardLetter="D" cardLabel="Design Core" />
           </section>
+          
 
           <section className="flex items-center justify-center min-h-screen">
-            <Card imageSrc={imgSketches} cardLetter="S" cardLabel="Sketches" />
+          <Link href="/homepage/Creative404">
+            <Card imageSrc={imgSketchesCover} cardLetter="S" cardLabel="Sketchbook" />
+          </Link>
           </section>
+         */} 
 
-          <section className="flex flex-col lg:flex-row items-center space-x-8 justify-between min-h-screen">
+          <section className="flex flex-col lg:flex-row items-center lg:space-x-8 space-y-20 lg:space-y-0 justify-between min-h-screen">
             <a href="mailto:jobe.o@northeastern.edu">
                 <Card imageSrc={imgOutlook} cardLetter="E" cardLabel="Email" />
             </a>
@@ -96,7 +101,6 @@ export default function TitlePage(){
             <Card imageSrc={imgInstagram} cardLetter="I" cardLabel="Instagram" />
             </a>
           </section>
-          
         </div>
       );
 };

@@ -1,101 +1,107 @@
-import Image from "next/image";
+'use client';
+import Link from 'next/link';
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+import Card from "@/components/pageCard";
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+//import imgProject from "@/images/projectCover.jpg";
+//import imgAboutMe from "@/images/mePhoto1.png";
+import imgLinkedIn from "/public/images/linkedinLogo.png";
+//import imgGmail from "@/images/gmailLogo.png";
+import imgOutlook from "/public/images/outlook.png";
+import imgInstagram from "/public/images/instagramLogo.png";
+import imgSketches from "/public/images/sketches.png";
+import imgSketchesCover from "/public/images/SketchesCoverImage.jpg"
+import imgDesignCore from "/public/images/designCore.jpg";
+import imgProjects from "/public/images/projects.jpg";
+
+//import imgMe1 from "@/images/me1.jpg";
+import imgMe2 from "/public/images/me2.jpg";
+
+import InfiniteText from '@/components/infiniteTextMoveOnScroll';
+import ScrambleText from '@/components/ScrambleText';
+
+import { AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from 'react';
+
+import Preloader from '@/components/preloaderCurve';
+
+export default function TitlePage(){
+  /*
+  <h1 className="text-center text-[220px]">
+              Ousman Jobe
+            </h1>
+  */
+  const preloadWords: string[] = ["Welcome",];
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+  
+      // Initialize LocomotiveScroll
+      const locomotiveScroll = new LocomotiveScroll();
+  
+      setTimeout(() => {
+        setIsLoading(false); // Ensure `setIsLoading` is properly typed in your component
+        document.body.style.cursor = 'default';
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
+  
+  const texts = [
+    'Ousman Jobe',
+  ];
+    return (
+        <div className="flex flex-col items-center justify-center min-h-screen">
+          <AnimatePresence mode='wait'>
+            {isLoading && <Preloader words={preloadWords} />}
+          </AnimatePresence>
+          
+          <section className="flex items-center justify-center min-h-screen">
+            <ScrambleText texts={texts} />
+          </section>
+
+          <section className="flex items-center justify-center min-h-screen">
+            <Link href="/homepage/aboutMe">
+                <Card imageSrc={imgMe2} cardLetter="A" cardLabel="About Me" />
+            </Link>
+          </section>
+
+          <section className="flex items-center justify-center min-h-screen">
+            <Link href="/homepage/projects">
+                <Card imageSrc={imgProjects} cardLetter="P" cardLabel="Projects" />
+            </Link>
+          </section>
+         
+         {/*
+          <section className="flex items-center justify-center min-h-screen">
+            <Card imageSrc={imgDesignCore} cardLetter="D" cardLabel="Design Core" />
+          </section>
+          
+
+          <section className="flex items-center justify-center min-h-screen">
+          <Link href="/homepage/Creative404">
+            <Card imageSrc={imgSketchesCover} cardLetter="S" cardLabel="Sketchbook" />
+          </Link>
+          </section>
+         */} 
+
+          <section className="flex flex-col lg:flex-row items-center lg:space-x-8 space-y-20 lg:space-y-0 justify-between min-h-screen">
+            <a href="mailto:jobe.o@northeastern.edu">
+                <Card imageSrc={imgOutlook} cardLetter="E" cardLabel="Email" />
+            </a>
+
+            <a href="https://www.linkedin.com/in/jobe-ousman" target="_blank" rel="noopener noreferrer">
+                <Card imageSrc={imgLinkedIn} cardLetter="L" cardLabel="LinkedIn" />
+            </a>
+
+            <a href="https://www.instagram.com/lounge_tales/profilecard/?igsh=NXl1cnl5M3RlaWRs" target="_blank" rel="noopener noreferrer">
+            <Card imageSrc={imgInstagram} cardLetter="I" cardLabel="Instagram" />
+            </a>
+          </section>
+          
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
-}
+      );
+};

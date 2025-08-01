@@ -12,7 +12,7 @@ export interface Project {
       description: "This is an interactive and aesthetically pleasing online portfolio consisting of my art and design projects as well as a means of accessing my software projects on GitHub. It includes information about myself, values, thought process, and sources of inspiration. My creative nature should be conveyed through the website’s design as well.",
       src: "house.jpg",
       url: "https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/",
-      color: "#B62429",
+      color: "#E4A2A2",
     },
     {
       title: "Midnight Munchies (Summer 2024)",
@@ -34,7 +34,7 @@ export interface Project {
       description: "Program which supports loading, exporting, filtering, and color transformations for images in commonly used formats. A Swing GUI and batch scripting interface have been provided for layered manipulation.",
       src: "ImageProcessorCoverImage.png",
       url: "https://github.com/ousmanjobe/ImageProcessorProject",
-      color: "#C2491D",
+      color: "#F0C98E",
     },
     
   ];
