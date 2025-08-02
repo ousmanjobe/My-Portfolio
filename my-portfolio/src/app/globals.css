@@ -1,9 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text:wght@400&display=swap');
+@import url('lightgallery/css/lightgallery-bundle.css');
 
 :root {
-  --background: #ffffff;
+  --background: #000000;
   --foreground: #171717;
 }
 
@@ -14,10 +17,77 @@
   }
 }
 
+@font-face {
+  font-family: 'Ailerons';
+  src: url('/src/fonts/Ailerons-Typeface.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/src/fonts/Avenir Next.ttc') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('/src/fonts/Avenir Next.ttc') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Urbanist';
+  src: url('/src/fonts/Urbanist-VariableFont_wght.ttf') format('tff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Urbanist-Italic';
+  src: url('/src/fonts/Urbanist-Italic-VariableFont_wght.ttf') format('tff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Nagasaki';
+  src: url('/src/fonts/nagasaki.ttf') format('tff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dongpora';
+  src: url('/src/fonts/Dongpora-BF65c3a46d6cc22.otf') format('otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Ailerons', 'Avenir Next', 'Kalam', 'Urbanist', 'Urbanist-Italic', 'Nagasaki', 'Dongpora',
+   Arial, Helvetica, sans-serif;
+}
+
+.urbanistFont {
+  font-family: 'Urbanist', sans-serif;
+}
+
+.dongporaFont {
+  font-family: 'Dongpora', sans-serif;
+}
+
+.avenirNextFont {
+  font-family: 'Avenir Next', sans-serif;
+  font-weight: bold;
+}
+
+.barcode-text {
+  font-family: 'Libre Barcode 39 Text';
 }
 
 @layer utilities {

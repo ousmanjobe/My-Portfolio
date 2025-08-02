@@ -1,0 +1,67 @@
+  .textScrambleContent {
+    font-size: max(13rem, min(5.69579vw + 0.665049rem, 10rem));
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+   
+    
+    position: relative;
+    width: 95vw;
+  }
+  
+  .textScrambleText {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+  }
+  
+  .textScrambleText span {
+    word-break: break-word;
+  }
+  
+  .textScrambleText img {
+    display: inline-block;
+    height: 0.9em;
+    width: auto;
+  }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .textScrambleContent {
+    font-size: max(10rem, min(4.5vw + 0.5rem, 8rem)); /* Reduce font size for tablets */
+    width: 90vw; /* Increase width for smaller screens */
+  }
+
+  .textScrambleText {
+    text-align: center; /* Ensure text remains centered */
+  }
+
+  .textScrambleText img {
+    height: 0.8em; /* Adjust image size for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .textScrambleContent {
+    font-size: max(8rem, min(4vw + 0.4rem, 6rem)); /* Reduce font size for mobile devices */
+    width: 100vw; /* Make content take full width */
+  }
+
+  .textScrambleText img {
+    height: 0.7em; /* Adjust image size for mobile devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .textScrambleContent {
+    font-size: max(6rem, min(3.5vw + 0.3rem, 5rem)); /* Reduce font size for very small screens */
+    width: 100vw; /* Ensure content spans the full width */
+  }
+
+  .textScrambleText img {
+    height: 0.6em; /* Adjust image size for very small screens */
+  }
+}

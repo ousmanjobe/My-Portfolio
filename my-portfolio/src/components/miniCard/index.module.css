@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap');
+
+.cardImage {
+    position: absolute;
+    object-fit: cover;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    height: 100%;
+    left: 0%;
+    border-radius: 2.75rem 2.75rem 0rem 0rem;
+    aspect-ratio: 1 / 1;
+}
+
+.imageContainer {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    bottom: 34.05%;
+    border-radius: 2.75rem 2.75rem 0rem 0rem;
+    background-color: #ffffff;
+    
+}
+.descriptionSection {
+    position: absolute;
+    height: 6.705rem;
+    width: 100%;
+    top: 65.95%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 0rem 0rem 2.75rem 2.75rem;
+    background-color: #5e4458;
+    aspect-ratio: 16 / 9;
+}
+.letterCircle {
+    position: absolute;
+    height: 24%;
+    width: 31%;
+    top: 55%;
+    left: 6%;
+    border-radius: 50%;
+    background-color: #222;
+    aspect-ratio: 1 / 1;
+}
+.cardLetter {
+    position: absolute;
+    height: 22%;
+    width: 20%;
+    top: 53.36%;
+    left: 11.71%;
+    display: inline-block;
+    aspect-ratio: 1 / 1;
+    color: #ff8282;
+}
+.barcodeTitle {
+    position: absolute;
+    text-align: right;
+    height: 3.86%;
+    width: 69.34%;
+    top: 88.58%;
+    right: 14%;
+    font-size: 1.7rem;
+    letter-spacing: 0.04em;
+    font-family: 'Libre Barcode 39 Text';
+    display: inline-block;
+    aspect-ratio: auto;
+}
+
+.rectangleParent {
+    width: 100%;
+    max-width: 246px;
+    position: relative;
+    height: 19.125rem;
+    aspect-ratio: 246 / 330;
+    text-align: center;
+    font-size: 4.1rem;
+    color: #fff;
+    font-family: Kalam;
+}

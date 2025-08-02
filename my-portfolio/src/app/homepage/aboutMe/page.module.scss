@@ -1,0 +1,186 @@
+.main {
+    height: auto;
+    width: 100vw;
+    display: flex; /* Use flexbox to position text and image side by side */
+    align-items: center; /* Align items vertically */
+    justify-content: space-between; /* Add space between text and image */
+    margin: 70px;
+    
+    .mask {
+        width: 100vw; /* Text takes up 55% of the screen width */
+        height: 100vh;
+        text-align: left; /* Align text to the left */
+        color: rgb(211, 211, 211);
+        font-size: 2.5vw;
+        font-weight: 700;
+        font-family: 'Urbanist';
+        line-height: 4rem;
+        cursor: default;
+        position:absolute;
+    
+        p {
+          color: rgb(19, 18, 18);
+          font-family: 'Urbanist';
+          font-size: 2.5vw;
+          font-weight: 700;
+          width: 70%;
+          padding: 40px;
+          position: absolute;
+          
+        }
+    
+        span {
+          color: #ec4e39;
+        }
+      }
+
+    .body {
+      width: 74%; /* Text takes up 55% of the screen width */
+      text-align: left; /* Align text to the left */
+      color: rgb(211, 211, 211);
+      font-size: 2.5vw;
+      font-weight: 700;
+      font-family: 'Urbanist';
+      line-height: 4rem;
+      cursor: default;
+  
+      p {
+        color: rgb(211, 211, 211);
+        font-family: 'Urbanist';
+        font-size: 2.5vw;
+        font-weight: 700;
+        width: 100%;
+        padding: 40px;
+      }
+  
+      span {
+        color: #ec4e39;
+      }
+    }
+
+    .mask {
+        mask-image: url('/images/mask.svg');
+        mask-repeat: no-repeat;
+        mask-size: 40px;
+        background: #ec4e39;
+        position: absolute;
+        color: black;
+      }
+  
+    .imageContainer {
+      width: 25%; /* Image takes up 25% of the screen width */
+      height: auto;
+      display: flex;
+      justify-content: center; /* Center the image horizontally */
+      align-items: center; /* Center the image vertically */
+      margin-right: 3.5vw;
+      margin-left: 3.5vw;
+      overflow: hidden;
+
+      img {
+        max-width: 100%; /* Ensure the image is responsive */
+        height: auto; /* Maintain the aspect ratio */
+        object-fit: contain; /* Ensure the image fits nicely */
+        border-radius: 8px; /* Optional: Add rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+      }
+    }
+  
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .body {
+        width: 60%; /* Text takes up more space on smaller screens */
+        font-size: 3vw; /* Adjust font size for tablets */
+        line-height: 3rem; /* Adjust line height */
+      }
+  
+      .imageContainer {
+        width: 30%; /* Image takes up more space on smaller screens */
+      }
+  
+      p {
+        font-size: 3vw; /* Adjust paragraph font size */
+        padding: 20px; /* Reduce padding */
+      }
+
+      .mask {
+        font-size: 3vw; /* Adjust font size for tablets */
+        line-height: 3rem; /* Adjust line height */
+        mask-size: 30px; /* Reduce mask size for tablets */
+      }
+  
+      .mask p {
+        font-size: 3vw; /* Adjust paragraph font size */
+        width: 74%; /* Increase width for smaller screens */
+        padding: 20px; /* Reduce padding */
+      }
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column; /* Stack text and image vertically */
+      align-items: center; /* Center align items */
+  
+      .body {
+        width: 90%; /* Text takes full width */
+        font-size: 4vw; /* Adjust font size for mobile devices */
+        line-height: 2.5rem; /* Adjust line height */
+        margin-bottom: 16px; /* Add spacing below the text */
+      }
+  
+      .imageContainer {
+        width: 90%; /* Image takes full width */
+      }
+  
+      p {
+        font-size: 4vw; /* Adjust paragraph font size */
+        padding: 15px; /* Reduce padding */
+      }
+
+      .mask {
+        font-size: 4vw; /* Adjust font size for mobile devices */
+        line-height: 2.5rem; /* Adjust line height */
+        mask-size: 25px; /* Reduce mask size for mobile devices */
+      }
+  
+      .mask p {
+        font-size: 4vw; /* Adjust paragraph font size */
+        width: 90%; /* Increase width for smaller screens */
+        padding: 15px; /* Reduce padding */
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .body {
+        width: 100%; /* Text takes full width */
+        font-size: 5vw; /* Adjust font size for very small screens */
+        line-height: 2rem; /* Adjust line height */
+      }
+  
+      .imageContainer {
+        width: 100%; /* Image takes full width */
+      }
+  
+      p {
+        font-size: 5vw; /* Adjust paragraph font size */
+        padding: 10px; /* Reduce padding */
+      }
+  
+      .mask {
+        font-size: 5vw; /* Adjust font size for very small screens */
+        line-height: 2rem; /* Adjust line height */
+        mask-size: 20px; /* Reduce mask size for very small screens */
+      }
+  
+      .mask p {
+        font-size: 5vw; /* Adjust paragraph font size */
+        width: 100%; /* Make paragraph take full width */
+        padding: 10px; /* Reduce padding */
+      }
+    }
+  }
+
+
+
+
+
+

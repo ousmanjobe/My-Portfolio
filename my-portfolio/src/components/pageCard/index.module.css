@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap');
+
+.cardImage {
+    position: absolute;
+    object-fit: cover;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    height: 100%;
+    left: 0%;
+    border-radius: 44px 44px 0px 0px;
+    aspect-ratio: 1 / 1;
+}
+
+.imageContainer {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    bottom: 34.05%;
+    border-radius: 44px 44px 0px 0px;
+    background-color: #ffffff;
+    
+}
+.descriptionSection {
+    position: absolute;
+    height: 14.875rem;
+    width: 100%;
+    top: 65.95%;
+    right: 0%;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 0px 0px 44px 44px;
+    background-color: #3f4763;
+    aspect-ratio: 16 / 9;
+}
+/*
+Original description section color: #5b5b5b
+*/
+.letterCircle {
+    position: absolute;
+    height: 24%;
+    width: 31%;
+    top: 55%;
+    left: 6%;
+    border-radius: 50%;
+    background-color: #222;
+    aspect-ratio: 1 / 1;
+}
+.cardLetter {
+    position: absolute;
+    height: 22%;
+    width: 20%;
+    top: 53.36%;
+    left: 11.71%;
+    display: inline-block;
+    aspect-ratio: 1 / 1;
+    color: #9FC3EE;
+}
+.barcodeTitle {
+    position: absolute;
+    text-align: right;
+    height: 3.86%;
+    width: 49.34%;
+    top: 94.28%;
+    right: 8%;
+    font-size: 2.4rem;
+    letter-spacing: 0.04em;
+    font-family: 'Libre Barcode 39 Text';
+    display: inline-block;
+    aspect-ratio: auto;
+}
+
+.rectangleParent {
+    width: 100%;
+    max-width: 469px;
+    position: relative;
+    height: 39.313rem;
+    aspect-ratio: 469 / 629;
+    text-align: center;
+    font-size: 128px;
+    color: #fff;
+    font-family: Kalam;
+}
+

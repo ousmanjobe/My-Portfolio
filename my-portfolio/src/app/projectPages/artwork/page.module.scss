@@ -1,0 +1,110 @@
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lightgallery.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-zoom.css');
+@import url('https://cdn.jsdelivr.net/npm/lightgallery@2.4.0/css/lg-share.css');
+
+.main{
+    margin-top: 5vh;
+    color: white;
+    padding-bottom: 10vh;
+    height: auto;
+    width: 100vw;
+    align-items: center;
+
+    .margin {
+      margin-bottom: 6rem; /* Adjust as needed */
+    }
+  
+    h1{
+      padding: 20px;
+      font-size: 8vw; 
+      width: 100%;
+      font-weight: 900;
+      text-align: center;
+      color: rgb(0, 0, 0);
+      background-color: white;
+    }
+
+    h2{
+      padding: 40px;
+      font-size: 3vw; 
+      width: 100%;
+      font-weight: 400;
+      text-align: center;
+    }
+    
+    .gallery{
+      height: 245vh;
+      //background: rgb(45, 45, 45);
+      position: relative;
+      display: flex;
+      gap: 2vw;
+      padding: 2vw;
+      box-sizing: border-box;
+      overflow: hidden;
+      .column{
+          position: relative;
+          height: 100%;
+          width: 25%;
+          min-width: 250px;
+          display: flex;
+          flex-direction: column;
+          gap: 2vw;
+          .imageContainer{
+              height: 100%;
+              width: 100%;
+              position: relative;
+              border-radius: 1vw;
+              overflow: hidden;
+              img{
+                  object-fit: cover;
+              }
+          }
+          &:nth-of-type(1){
+              top: -45%;
+          }
+          &:nth-of-type(2){
+              top: -95%;
+          }
+          &:nth-of-type(3){
+              top: -40%;
+          }
+          &:nth-of-type(4){
+              top: -75%;
+          }
+      }
+  }
+  .spacer{
+      height: 29vh;
+      background-color: rgb(255, 255, 255);
+      align-items: center;
+
+      @media (max-width: 1024px) {
+        height: 25vh; /* Adjust height for tablets */
+      }
+    
+      @media (max-width: 768px) {
+        height: 25vh; /* Adjust height for mobile devices */
+      }
+    
+      @media (max-width: 480px) {
+        height: 15vh; /* Adjust height for very small screens */
+      }
+  }
+  .spacer1{
+    height: 2vh;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    @media (max-width: 1024px) {
+      height: 1.5vh; /* Adjust height for tablets */
+    }
+  
+    @media (max-width: 768px) {
+      height: 1vh; /* Adjust height for mobile devices */
+    }
+  
+    @media (max-width: 480px) {
+      height: 0.5vh; /* Adjust height for very small screens */
+    }
+}
+
+  }
