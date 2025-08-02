@@ -8,10 +8,10 @@ export interface Project {
   
   export const projects: Project[] = [
     {
-      title: "Portfolio Website (Spring 2025)",
+      title: "Portfolio Website (Summer 2025)",
       description: "This is an interactive and aesthetically pleasing online portfolio consisting of my art and design projects as well as a means of accessing my software projects on GitHub. It includes information about myself, values, thought process, and sources of inspiration. My creative nature should be conveyed through the website’s design as well.",
-      src: "house.jpg",
-      url: "https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/",
+      src: "NextJS.png",
+      url: "https://www.figma.com/board/9JE3sinoKkFrQ533G2NsXR/Portfolio-Sitemap?node-id=0-1&t=eGETo77inABu4xcn-1",
       color: "#E4A2A2",
     },
     {
