@@ -2,7 +2,7 @@
 import styles from './index.module.scss';
 import Image from 'next/image';
 import { useRef } from 'react';
-import { useScroll, useTransform, MotionValue } from 'framer-motion';
+import { useScroll, MotionValue } from 'framer-motion';
 import gsap from 'gsap';
 import {
   floating1,
@@ -67,10 +67,6 @@ export default function FloatingImageGallery() {
 
 
   const container = useRef<HTMLDivElement | null>(null); // Type the ref as HTMLDivElement or null
-  const { scrollYProgress }: { scrollYProgress: MotionValue<number> } = useScroll({
-    target: container,
-    offset: ["start end", "end start"],
-  });
 
 
   return (

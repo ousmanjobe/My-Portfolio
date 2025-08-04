@@ -20,7 +20,7 @@ export default function AmoutMePage(){
 
     useEffect(() => {
       (async () => {
-        const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        //const LocomotiveScroll = (await import('locomotive-scroll')).default;
     
         // Initialize LocomotiveScroll
         //const locomotiveScroll = new LocomotiveScroll();

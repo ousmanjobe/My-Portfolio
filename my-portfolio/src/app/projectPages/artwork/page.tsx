@@ -11,14 +11,6 @@ import { useTransform, useScroll, motion, MotionValue } from 'framer-motion';
 
 import DoubleImage from '@/components/mouse-scale-image-gallery';
 
-interface Project {
-    name: string;
-    client: string;
-    description: string;
-    src: string;
-    year: number;
-  }
-
 interface Dimension {
     width: number;
     height: number;
