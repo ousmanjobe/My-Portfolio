@@ -68,7 +68,7 @@ export default function UXUIPage(){
 
   const { height } = dimension;
   const y = useTransform(scrollYProgress, [0, 1], [0, height * 2.9]);
-  const y2 = useTransform(scrollYProgress, [0, 1.08], [0, height * 5.5]);
+  const y2 = useTransform(scrollYProgress, [0, 1.08], [0, height * 5.05]);
   const y3 = useTransform(scrollYProgress, [0, 1.7], [0, height * 2.35]);
   const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
 
