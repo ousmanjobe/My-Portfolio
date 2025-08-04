@@ -1,7 +1,14 @@
 import styles from './style.module.scss';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { slide, scale } from '../../anim';
+import { scale } from '../../anim'; // Ensure scale is of type Variants or replace it with a valid Variants object
+import { Variants } from 'framer-motion';
+
+const slide: Variants = {
+  initial: { opacity: 0, x: -100 },
+  enter: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: 100 },
+};
 
 interface Data {
   title: string;
@@ -26,10 +33,9 @@ export default function Index({ data, isActive, setSelectedIndicator }: Props) {
       variants={slide}
       initial="initial"
       animate="enter"
-      exit="exit"
     >
       <motion.div
-        variants={scale}
+        variants={scale as Variants} // Cast scale to Variants type if it is compatible
         animate={isActive ? 'open' : 'closed'}
         className={styles.indicator}
       ></motion.div>
