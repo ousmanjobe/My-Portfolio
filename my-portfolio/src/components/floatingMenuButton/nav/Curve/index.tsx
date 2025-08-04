@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, cubicBezier } from 'framer-motion';
 import styles from './styles.module.scss';
 
 export default function Index() {
@@ -12,11 +12,11 @@ export default function Index() {
     },
     enter: {
       d: targetPath,
-      transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 1, ease: cubicBezier(0.76, 0, 0.24, 1) },
     },
     exit: {
       d: initialPath,
-      transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 0.8, ease: cubicBezier(0.76, 0, 0.24, 1) },
     },
   };
 
