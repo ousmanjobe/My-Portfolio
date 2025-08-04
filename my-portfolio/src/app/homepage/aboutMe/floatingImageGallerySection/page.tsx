@@ -71,7 +71,6 @@ export default function FloatingImageGallery() {
     target: container,
     offset: ["start end", "end start"],
   });
-  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]); // Type inference handles this
 
 
   return (

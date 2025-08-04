@@ -3,21 +3,14 @@ import Link from 'next/link';
 
 import Card from "@/components/pageCard";
 
-//import imgProject from "@/images/projectCover.jpg";
-//import imgAboutMe from "@/images/mePhoto1.png";
 import imgLinkedIn from "/public/images/linkedinLogo.png";
-//import imgGmail from "@/images/gmailLogo.png";
 import imgOutlook from "/public/images/outlook.png";
 import imgInstagram from "/public/images/instagramLogo.png";
-import imgSketches from "/public/images/sketches.png";
-import imgSketchesCover from "/public/images/SketchesCoverImage.jpg"
-import imgDesignCore from "/public/images/designCore.jpg";
+
 import imgProjects from "/public/images/projects.jpg";
 
-//import imgMe1 from "@/images/me1.jpg";
 import imgMe2 from "/public/images/me2.jpg";
 
-import InfiniteText from '@/components/infiniteTextMoveOnScroll';
 import ScrambleText from '@/components/ScrambleText';
 
 import { AnimatePresence } from 'framer-motion';
@@ -40,7 +33,7 @@ export default function TitlePage(){
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
   
       // Initialize LocomotiveScroll
-      const locomotiveScroll = new LocomotiveScroll();
+      //const locomotiveScroll = new LocomotiveScroll();
   
       setTimeout(() => {
         setIsLoading(false); // Ensure `setIsLoading` is properly typed in your component

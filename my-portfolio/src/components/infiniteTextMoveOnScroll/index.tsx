@@ -9,8 +9,8 @@ export default function InfiniteText() {
   const firstText = useRef<HTMLParagraphElement | null>(null);
   const secondText = useRef<HTMLParagraphElement | null>(null);
   const slider = useRef<HTMLDivElement | null>(null);
+  const direction = useRef<number>(-1); // Use useRef to store the direction value
   let xPercent = 0;
-  let direction = -1;
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -21,13 +21,14 @@ export default function InfiniteText() {
         scrub: 0.25,
         start: '0',
         end: `${window.innerHeight}`,
-        onUpdate: (e) => (direction = e.direction * -1),
+        onUpdate: (e) => (direction.current = e.direction * -1), // Update direction using useRef
       },
       x: '-500px',
     });
 
     requestAnimationFrame(animate);
-  }, []);
+
+  }, []); // Dependency array remains empty since direction is stored in useRef
 
   const animate = () => {
     if (xPercent < -100) {
@@ -44,7 +45,7 @@ export default function InfiniteText() {
     }
 
     requestAnimationFrame(animate);
-    xPercent += 0.1 * direction;
+    xPercent += 0.1 * direction.current;
   };
 
   return (

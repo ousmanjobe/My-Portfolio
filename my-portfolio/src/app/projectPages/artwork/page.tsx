@@ -4,7 +4,6 @@ import styles from './page.module.scss'
 
 import React, { useEffect, useRef, useState } from 'react';
 import { recProjects } from '@/dataRecArtwork';
-import { conProjects } from '@/dataConceptArt';
 
 import Image from 'next/image';
 import Lenis from '@studio-freight/lenis';
@@ -19,12 +18,6 @@ interface Project {
     src: string;
     year: number;
   }
-  
-interface DoubleProps {
-    projects: [Project, Project]; // Expect exactly two projects
-    reversed?: boolean; // Optional prop
-    objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down'; // Optional prop for object fit
-}
 
 interface Dimension {
     width: number;
@@ -37,7 +30,7 @@ interface Dimension {
   }
   
 
-export default function UXUIPage(){
+export default function ArtworkPage(){
     const images = [
         'Poster1.png',
         'Poster3.PNG',
@@ -53,8 +46,6 @@ export default function UXUIPage(){
         'Poster4.jpg',
         'PosterArt3v1.jpg'
       ];
-
-    const [open, setOpen] = useState(false);
 
     // Smooth Vertical Parallax Image Scroll Gallery
 
@@ -107,7 +98,7 @@ export default function UXUIPage(){
                     </h1>
 
                     <h2 className='urbanistFont'>
-                        Used a 2B pencil and 9x12 paper to draw pieces I found in Boston's Museum of Fine Arts, spending 30 minutes on each. My goal was to notice and account for as much detail as each artist included in order to acquire their lenses when depicting depth and texture.
+                        Used a 2B pencil and 9x12 paper to draw pieces I found in Boston&apos;s Museum of Fine Arts, spending 30 minutes on each. My goal was to notice and account for as much detail as each artist included in order to acquire their lenses when depicting depth and texture.
                     </h2>
                     <div className={styles.margin}>
                         <DoubleImage projects={[recProjects[0], recProjects[1]]} />

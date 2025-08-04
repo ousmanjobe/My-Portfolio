@@ -4,9 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import FlipCard from '@/components/flipCard';
 import { projects } from '@/dataUXUI';
 
-import PlayLaterBack from "/BackCardPlayLaterImage.png";
-import PlayLaterCover from "/PlayLaterCoverImage.png";
-import PlayLaterTitleCard from "/PlayLaterTitleCard.png";
+
 import { useScroll } from 'motion/react';
 import Lenis from '@studio-freight/lenis';
 

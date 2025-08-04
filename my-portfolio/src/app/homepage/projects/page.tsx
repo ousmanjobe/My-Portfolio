@@ -2,16 +2,10 @@
 import Link from 'next/link';
 
 import Card from "@/components/pageCard";
-import MiniCard from "@/components/miniCard";
 
 import imgSoftware from "/public/images/software.jpg";
-import imgPhotography1 from "/public/images/photography1.jpg";
-import imgPhotography2 from "/public/images/photography2.jpg";
-import imgFeatured from "/public/images/featured.jpg";
-import imgFeatured2 from "/public/images/featured2.jpg";
 import imgArtwork from "/public/images/artwork.jpg";
 import imgUXUI1 from "/public/images/uxui.jpg";
-import imgUXUI2 from "/public/images/uxui2.jpg";
 
 import { AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
@@ -29,7 +23,7 @@ export default function ProjectsPage(){
         const LocomotiveScroll = (await import('locomotive-scroll')).default;
     
         // Initialize LocomotiveScroll
-        const locomotiveScroll = new LocomotiveScroll();
+        //const locomotiveScroll = new LocomotiveScroll();
     
         setTimeout(() => {
           setIsLoading(false); // Ensure `setIsLoading` is properly typed in your component

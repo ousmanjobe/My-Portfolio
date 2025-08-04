@@ -1,7 +1,7 @@
 'use client';
 import styles from './style.module.scss';
 import Image from 'next/image';
-import { useRef, useEffect, RefObject } from 'react';
+import { useRef, useEffect } from 'react';
 
 interface Project {
   src: string;

@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image';
 import styles from './style.module.scss';
-import { useTransform, motion, useScroll } from 'framer-motion';
+import { useTransform, motion, useScroll, MotionValue } from 'framer-motion';
 import { useRef } from 'react';
 
 interface CardProps {
@@ -11,7 +11,7 @@ interface CardProps {
   src: string;
   url: string;
   color: string;
-  progress: any; // Replace `any` with the correct type if known
+  progress: MotionValue<number>;
   range: [number, number];
   targetScale: number;
 }

@@ -1,17 +1,13 @@
 'use client';
 
 import styles from './page.module.scss';
-import { AnimatePresence, useScroll, useTransform, motion, useInView } from 'framer-motion';
-import React, { useState, useEffect, useRef, MutableRefObject } from 'react';
-import Image from 'next/image';
+import { AnimatePresence, useScroll, useTransform, motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+
 import Lenis from 'lenis';
 
 import Preloader from '@/components/preloaderCurve';
 
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import gsap from 'gsap';
-
-import useMousePosition from './utils/useMousePosition'
 import FloatingImageGallery from './floatingImageGallerySection/page';
 
 
@@ -27,7 +23,7 @@ export default function AmoutMePage(){
         const LocomotiveScroll = (await import('locomotive-scroll')).default;
     
         // Initialize LocomotiveScroll
-        const locomotiveScroll = new LocomotiveScroll();
+        //const locomotiveScroll = new LocomotiveScroll();
     
         setTimeout(() => {
           setIsLoading(false); // Ensure `setIsLoading` is properly typed in your component
