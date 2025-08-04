@@ -20,10 +20,6 @@ export default function ProjectsPage(){
   
     useEffect(() => {
       (async () => {
-        const LocomotiveScroll = (await import('locomotive-scroll')).default;
-    
-        // Initialize LocomotiveScroll
-        //const locomotiveScroll = new LocomotiveScroll();
     
         setTimeout(() => {
           setIsLoading(false); // Ensure `setIsLoading` is properly typed in your component

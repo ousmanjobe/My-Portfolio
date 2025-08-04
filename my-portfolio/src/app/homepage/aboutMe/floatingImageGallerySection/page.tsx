@@ -2,7 +2,6 @@
 import styles from './index.module.scss';
 import Image from 'next/image';
 import { useRef } from 'react';
-import { useScroll, MotionValue } from 'framer-motion';
 import gsap from 'gsap';
 import {
   floating1,
