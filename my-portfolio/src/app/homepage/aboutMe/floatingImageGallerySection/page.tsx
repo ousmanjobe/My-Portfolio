@@ -24,15 +24,15 @@ export default function FloatingImageGallery() {
   const easing = 0.08;
   const speed = 0.01;
 
-  const manageMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
-    const { movementX, movementY } = e;
-    xForce += movementX * speed;
-    yForce += movementY * speed;
-
-    if (requestAnimationFrameId == null) {
-      requestAnimationFrameId = requestAnimationFrame(animate);
-    }
-  };
+  const manageMouseMove = (e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
+      const { movementX, movementY } = e;
+      xForce += movementX * speed;
+      yForce += movementY * speed;
+  
+      if (requestAnimationFrameId == null) {
+        requestAnimationFrameId = requestAnimationFrame(animate);
+      }
+    };
 
   const lerp = (start: number, target: number, amount: number): number =>
     start * (1 - amount) + target * amount;
