@@ -38,26 +38,7 @@
 /*
 Original description section color: #5b5b5b
 */
-.letterCircle {
-    position: absolute;
-    height: 24%;
-    width: 31%;
-    top: 55%;
-    left: 6%;
-    border-radius: 50%;
-    background-color: #222;
-    aspect-ratio: 1 / 1;
-}
-.cardLetter {
-    position: absolute;
-    height: 22%;
-    width: 20%;
-    top: 53.36%;
-    left: 11.71%;
-    display: inline-block;
-    aspect-ratio: 1 / 1;
-    color: #9FC3EE;
-}
+
 .barcodeTitle {
     position: absolute;
     text-align: right;

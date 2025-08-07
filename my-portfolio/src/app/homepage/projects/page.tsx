@@ -12,6 +12,8 @@ import { useState, useEffect } from 'react';
 
 import Preloader from '@/components/preloaderCurve';
 
+import TransitionCurve from '@/components/transitionCurve';
+
 export default function ProjectsPage(){
 
     const preloadWords: string[] = ["Projects",];

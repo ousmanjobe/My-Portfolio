@@ -60,44 +60,16 @@ export default function TitlePage(){
             <ScrambleText texts={texts} />
           </section>
 
-          <section className="flex items-center justify-center min-h-screen">
+          <section className="flex flex-col lg:flex-row items-center lg:space-x-8 space-y-20 lg:space-y-0 justify-between min-h-screen">
             <Link href="/homepage/aboutMe">
                 <Card imageSrc={imgMe2} cardLetter="A" cardLabel="About Me" />
             </Link>
-          </section>
-
-          <section className="flex items-center justify-center min-h-screen">
+          
             <Link href="/homepage/projects">
                 <Card imageSrc={imgProjects} cardLetter="P" cardLabel="Projects" />
             </Link>
           </section>
-         
-         {/*
-          <section className="flex items-center justify-center min-h-screen">
-            <Card imageSrc={imgDesignCore} cardLetter="D" cardLabel="Design Core" />
-          </section>
-          
 
-          <section className="flex items-center justify-center min-h-screen">
-          <Link href="/homepage/Creative404">
-            <Card imageSrc={imgSketchesCover} cardLetter="S" cardLabel="Sketchbook" />
-          </Link>
-          </section>
-         */} 
-
-          <section className="flex flex-col lg:flex-row items-center lg:space-x-8 space-y-20 lg:space-y-0 justify-between min-h-screen">
-            <a href="mailto:jobe.o@northeastern.edu">
-                <Card imageSrc={imgOutlook} cardLetter="E" cardLabel="Email" />
-            </a>
-
-            <a href="https://www.linkedin.com/in/jobe-ousman" target="_blank" rel="noopener noreferrer">
-                <Card imageSrc={imgLinkedIn} cardLetter="L" cardLabel="LinkedIn" />
-            </a>
-
-            <a href="https://www.instagram.com/lounge_tales/profilecard/?igsh=NXl1cnl5M3RlaWRs" target="_blank" rel="noopener noreferrer">
-            <Card imageSrc={imgInstagram} cardLetter="I" cardLabel="Instagram" />
-            </a>
-          </section>
         </div>
       );
 };
