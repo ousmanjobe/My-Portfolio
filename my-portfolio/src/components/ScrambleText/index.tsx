@@ -66,7 +66,7 @@ const ScrambleText: React.FC<ScrambleTextProps> = ({ texts }) => {
     tl.add(cursorTl);
 
     // Replay animation on click
-    window.onclick = () => tl.play(0);
+    //window.onclick = () => tl.play(0);
   }, [texts]);
 
   return (
