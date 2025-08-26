@@ -31,8 +31,8 @@ const customOptions = {
 
 interface CardProps {
     imageSrc?: string | StaticImageData;
-	cardLetter: string;
 	cardLabel: string;
+	description?: string;
     width?: number;
     height?: number;
     position?: 'static' | 'relative' | 'absolute' | 'fixed' | 'sticky';
@@ -41,7 +41,7 @@ interface CardProps {
     scale?: number;
 }
 
-const Card: React.FC<CardProps> = ({ imageSrc, cardLetter, cardLabel, width, height, top, left, scale = 1 }) => {
+const Card: React.FC<CardProps> = ({ imageSrc, cardLabel, description, width, height, top, left, scale = 1 }) => {
     return (
         <div style={{ transform: `scale(${scale})`, transformOrigin: 'top left', position: 'relative', top, left }}>
         <Tilt options={defaultOptions}>
@@ -57,9 +57,12 @@ const Card: React.FC<CardProps> = ({ imageSrc, cardLetter, cardLabel, width, hei
                      // placeholder="blur" // Optional blur-up while loading
                     />
                 </div>
-      			<div className={styles.descriptionSection} />
-      			<div className={styles.letterCircle} />
-      			<div className={styles.cardLetter}>{ cardLetter }</div>
+      			<div className={styles.descriptionSection}>
+					<div className={styles.descriptionText}>
+						{description}
+					</div>
+				</div>
+				
       			<div className={styles.barcodeTitle}>{ cardLabel }</div>
     		</div>
         </Tilt>

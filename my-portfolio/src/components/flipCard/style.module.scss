@@ -10,18 +10,19 @@
       flex-direction: column;
       position: relative;
       top: -25%;
-      height: 500px;
-      width: 1000px;
+      height: 600px;
+      width: 1200px;
       border-radius: 25px;
       padding:50px;
       transform-origin: top;
       h2{
         text-align: center;
         margin: 0px;
-        font-size: 28px;
+        font-size: 34px;
         font-family: 'Inter', sans-serif;
         font-weight: bold;
-        color: black;
+        color: rgb(0, 0, 0);
+        //text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
       }
       .body{
         display: flex;
@@ -34,12 +35,14 @@
           position: relative;
           top: 10%;
           font-family:'Inter', sans-serif;
-          color: black;
+          color: rgb(0, 0, 0);
+          font-weight: 470;
+          //text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
           p{
-            font-size: 18px;
+            font-size: 22px;
             &::first-letter{
-              font-size: 28px;
-              font-family: 'Title';
+              font-size: 34px;
+              font-family: 'Inter', sans-serif;
             }
           }
           span{
@@ -47,7 +50,7 @@
             align-items: center;
             gap: 5px;
             a{
-              font-size: 12px;
+              font-size: 16px;
               text-decoration: underline;
               cursor: pointer;
             }

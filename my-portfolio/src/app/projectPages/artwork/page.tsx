@@ -11,6 +11,8 @@ import { useTransform, useScroll, motion, MotionValue } from 'framer-motion';
 
 import DoubleImage from '@/components/mouse-scale-image-gallery';
 
+import Inner from '@/components/transitionCurve';
+
 interface Dimension {
     width: number;
     height: number;
@@ -77,16 +79,17 @@ export default function ArtworkPage(){
   }, []);
       
     return (
+      <Inner>
         <div className="flex flex-col items-center justify-center min-h-screen max-w-screen">
             <section className="flex items-center justify-center min-h-screen">
-                <h1 className="text-center text-[220px] dongporaFont">
+                <h1 className="text-center text-[220px] aileronsFont">
                     ARTWORK
                 </h1>
             </section>
             <section className={styles.main}>
                 <section>
-                    <h1 className='dongporaFont'>
-                        Famous Artwork Recreation
+                    <h1 className='urbanistFont'>
+                        Famous Artwork Recreations
                     </h1>
 
                     <h2 className='urbanistFont'>
@@ -99,8 +102,8 @@ export default function ArtworkPage(){
                 </section>
 
                 <section>
-                    <h1 className='dongporaFont'>
-                        Graphic Novel Concept Art
+                    <h1 className='urbanistFont'>
+                        Graphic Novel <br></br>Concept Art
                     </h1>
 
                     <div ref={gallery} className={styles.gallery}>
@@ -122,6 +125,7 @@ export default function ArtworkPage(){
                 </section>
             </section>
         </div>
+        </Inner>
     );
 }
 

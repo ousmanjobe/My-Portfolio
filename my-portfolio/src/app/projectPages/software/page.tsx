@@ -6,6 +6,7 @@ import { projects } from '@/dataSoftware';
 
 import { useScroll } from 'motion/react';
 import Lenis from '@studio-freight/lenis';
+import Inner from '@/components/transitionCurve';
 
 interface Project {
     title: string;
@@ -39,8 +40,9 @@ export default function SoftwarePage(){
 
     return (
         <div ref={container} className="flex flex-col items-center justify-center min-h-screen max-w-screen">
+          <Inner>
             <section className="flex items-center justify-center min-h-screen">
-                <h1 className="text-center text-[220px] urbanistFont">
+                <h1 className="text-center text-[220px] aileronsFont">
                     SOFTWARE
                 </h1>
             </section>
@@ -57,8 +59,8 @@ export default function SoftwarePage(){
                     targetScale={targetScale}
                 />
         );
-    })};
-            
+        })};
+            </Inner>
         </div>
     );
 };

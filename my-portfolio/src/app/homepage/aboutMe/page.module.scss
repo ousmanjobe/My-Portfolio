@@ -1,41 +1,14 @@
 .main {
     height: auto;
     width: 100vw;
+    max-width: 100%;
     display: flex; /* Use flexbox to position text and image side by side */
     align-items: center; /* Align items vertically */
     justify-content: space-between; /* Add space between text and image */
     margin: 70px;
-    
-    .mask {
-        width: 100vw; /* Text takes up 55% of the screen width */
-        height: 100vh;
-        text-align: left; /* Align text to the left */
-        color: rgb(211, 211, 211);
-        font-size: 2.5vw;
-        font-weight: 700;
-        font-family: 'Urbanist';
-        line-height: 4rem;
-        cursor: default;
-        position:absolute;
-    
-        p {
-          color: rgb(19, 18, 18);
-          font-family: 'Urbanist';
-          font-size: 2.5vw;
-          font-weight: 700;
-          width: 70%;
-          padding: 40px;
-          position: absolute;
-          
-        }
-    
-        span {
-          color: #ec4e39;
-        }
-      }
 
     .body {
-      width: 74%; /* Text takes up 55% of the screen width */
+      width: 70%; /* Text takes up 55% of the screen width */
       text-align: left; /* Align text to the left */
       color: rgb(211, 211, 211);
       font-size: 2.5vw;
@@ -57,15 +30,6 @@
         color: #ec4e39;
       }
     }
-
-    .mask {
-        mask-image: url('/images/mask.svg');
-        mask-repeat: no-repeat;
-        mask-size: 40px;
-        background: #ec4e39;
-        position: absolute;
-        color: black;
-      }
   
     .imageContainer {
       width: 25%; /* Image takes up 25% of the screen width */
@@ -100,18 +64,6 @@
   
       p {
         font-size: 3vw; /* Adjust paragraph font size */
-        padding: 20px; /* Reduce padding */
-      }
-
-      .mask {
-        font-size: 3vw; /* Adjust font size for tablets */
-        line-height: 3rem; /* Adjust line height */
-        mask-size: 30px; /* Reduce mask size for tablets */
-      }
-  
-      .mask p {
-        font-size: 3vw; /* Adjust paragraph font size */
-        width: 74%; /* Increase width for smaller screens */
         padding: 20px; /* Reduce padding */
       }
     }

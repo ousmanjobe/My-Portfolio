@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { AnimatePresence } from "framer-motion";
+
+
 import "./globals.css";
 import FloatingMenuButton from "../components/floatingMenuButton";
 

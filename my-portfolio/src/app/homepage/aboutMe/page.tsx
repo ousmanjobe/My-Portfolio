@@ -6,32 +6,11 @@ import React, { useState, useEffect, useRef } from 'react';
 
 import Lenis from 'lenis';
 
-import Preloader from '@/components/preloaderCurve';
-
 import FloatingImageGallery from './floatingImageGallerySection/page';
 
+import Inner from '@/components/transitionCurve';
 
 export default function AmoutMePage(){
-
-    
-    /////   Preloader   ///// 
-    const preloadWords: string[] = ["About Me",];
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-      (async () => {
-        //const LocomotiveScroll = (await import('locomotive-scroll')).default;
-    
-        // Initialize LocomotiveScroll
-        //const locomotiveScroll = new LocomotiveScroll();
-    
-        setTimeout(() => {
-          setIsLoading(false); // Ensure `setIsLoading` is properly typed in your component
-          document.body.style.cursor = 'default';
-          window.scrollTo(0, 0);
-        }, 2000);
-      })();
-    }, []);
 
     /////  Framer Motion Scroll  ///// 
 
@@ -52,15 +31,13 @@ export default function AmoutMePage(){
         offset: ['start start', 'end start'],
     });
 
-    const y = useTransform(scrollYProgress, [0, 1], ['0vh', '160vh']);
+    const y = useTransform(scrollYProgress, [0, 1], ['0vh', '200vh']);
 
 
     return (
+      <Inner>
         <div className="flex flex-col items-center justify-center min-h-screen max-w-screen">
-            <AnimatePresence mode='wait'>
-                {isLoading && <Preloader words={preloadWords} />}
-            </AnimatePresence>
-
+            
             <div ref={container1} className="h-screen w-screen overflow-hidden">
                 <motion.div style={{ y }} className="relative h-full">
                   <img
@@ -71,7 +48,7 @@ export default function AmoutMePage(){
                 </motion.div>
             </div>
 
-            <section className="flex items-center justify-center min-h-screen">
+            <section className="flex items-center justify-center min-h-screen max-w-screen">
             <main className={styles.main}>
 
               <div className={styles.body}>
@@ -94,6 +71,8 @@ export default function AmoutMePage(){
 
           
                 <FloatingImageGallery />
+                
         </div>
+        </Inner>
     );
 }

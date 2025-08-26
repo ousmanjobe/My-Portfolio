@@ -12,9 +12,13 @@ import { useState, useEffect } from 'react';
 
 import Preloader from '@/components/preloaderCurve';
 
-import TransitionCurve from '@/components/transitionCurve';
+import Inner from '@/components/transitionCurve';
 
 export default function ProjectsPage(){
+
+    const uxuiDescription = "Access several of my UX/UI projects over recent years";
+    const softwareDescription = "Access several of my software projects over recent years";
+    const artworkDescription = "Access several of my art projects over recent years";
 
     const preloadWords: string[] = ["Projects",];
 
@@ -32,11 +36,14 @@ export default function ProjectsPage(){
     }, []);
 
     return (
+        <Inner>
         <div className="flex flex-col items-center justify-center min-h-screen max-w-screen">
+            {/*}
             <AnimatePresence mode='wait'>
             {isLoading && <Preloader words={preloadWords} />}
           </AnimatePresence>
-            
+            */}
+
             <section className="flex items-center justify-center min-h-screen">
                 {/* Container for both grids */}
                 <div>
@@ -52,17 +59,17 @@ export default function ProjectsPage(){
                     <div className="flex flex-col lg:flex-row items-center lg:space-x-8 space-y-20 lg:space-y-0 justify-between min-h-screen">
                         <div>
                             <Link href="/projectPages/uxui">
-                                <Card imageSrc={imgUXUI1} cardLetter="U" cardLabel="UX/UI" />
+                                <Card imageSrc={imgUXUI1} description={uxuiDescription} cardLabel="UX/UI" />
                             </Link>
                         </div>
                         <div>
                             <Link href="/projectPages/software">
-                                <Card imageSrc={imgSoftware} cardLetter="S" cardLabel="Software"/>
+                                <Card imageSrc={imgSoftware} description={softwareDescription} cardLabel="Software"/>
                             </Link>
                         </div>
                         <div>
                             <Link href="/projectPages/artwork">
-                                <Card imageSrc={imgArtwork} cardLetter="A" cardLabel="Artwork" />
+                                <Card imageSrc={imgArtwork} description={artworkDescription} cardLabel="Artwork" />
                             </Link>
                         </div>
                         {/*}
@@ -74,5 +81,6 @@ export default function ProjectsPage(){
                 </div>
             </section>
         </div>
+        </Inner>
     );
 };

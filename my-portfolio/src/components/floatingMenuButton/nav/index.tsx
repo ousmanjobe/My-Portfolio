@@ -18,7 +18,7 @@ const navItems: NavItem[] = [
     href: "/",
   },
   {
-    title: "About me",
+    title: "About Me",
     href: "/homepage/aboutMe",
   },
   {
