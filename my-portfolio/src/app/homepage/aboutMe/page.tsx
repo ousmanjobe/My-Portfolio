@@ -1,8 +1,8 @@
 'use client';
 
 import styles from './page.module.scss';
-import { AnimatePresence, useScroll, useTransform, motion } from 'framer-motion';
-import React, { useState, useEffect, useRef } from 'react';
+import { useScroll, useTransform, motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
 
 import Lenis from 'lenis';
 

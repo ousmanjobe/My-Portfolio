@@ -3,20 +3,11 @@ import Link from 'next/link';
 
 import Card from "@/components/pageCard";
 
-import imgLinkedIn from "/public/images/linkedinLogo.png";
-import imgOutlook from "/public/images/outlook.png";
-import imgInstagram from "/public/images/instagramLogo.png";
-
 import imgProjects from "/public/images/projects.jpg";
 
 import imgMe2 from "/public/images/me2.jpg";
 
 import ScrambleText from '@/components/ScrambleText';
-
-import { AnimatePresence } from 'framer-motion';
-import { useState, useEffect } from 'react';
-
-import Preloader from '@/components/preloaderCurve';
 
 import Inner from '@/components/transitionCurve';
 

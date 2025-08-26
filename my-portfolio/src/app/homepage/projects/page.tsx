@@ -7,10 +7,7 @@ import imgSoftware from "/public/images/software.jpg";
 import imgArtwork from "/public/images/artwork.jpg";
 import imgUXUI1 from "/public/images/uxui.jpg";
 
-import { AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-
-import Preloader from '@/components/preloaderCurve';
 
 import Inner from '@/components/transitionCurve';
 
@@ -19,21 +16,6 @@ export default function ProjectsPage(){
     const uxuiDescription = "Access several of my UX/UI projects over recent years";
     const softwareDescription = "Access several of my software projects over recent years";
     const artworkDescription = "Access several of my art projects over recent years";
-
-    const preloadWords: string[] = ["Projects",];
-
-    const [isLoading, setIsLoading] = useState(true);
-  
-    useEffect(() => {
-      (async () => {
-    
-        setTimeout(() => {
-          setIsLoading(false); // Ensure `setIsLoading` is properly typed in your component
-          document.body.style.cursor = 'default';
-          window.scrollTo(0, 0);
-        }, 2000);
-      })();
-    }, []);
 
     return (
         <Inner>

@@ -1,9 +1,8 @@
 import React, { ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { motion, Variants } from 'framer-motion';
 import { slide, opacity, perspective } from './anim';
 
-const anim = (variants: any) => {
+const anim = (variants: Variants) => {
     return {
         initial: "initial",
         animate: "enter",
