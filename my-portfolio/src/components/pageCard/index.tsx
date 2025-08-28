@@ -51,6 +51,7 @@ const Card: React.FC<CardProps> = ({ imageSrc, cardLabel, description, width, he
                      src={imageSrc as string | StaticImageData}
                      alt="Card Image"
                      className={styles.cardImage}
+					 priority
                      // width={500} automatically provided
                      // height={500} automatically provided
                      // blurDataURL="data:..." automatically provided
