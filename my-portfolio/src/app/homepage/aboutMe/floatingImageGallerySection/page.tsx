@@ -91,9 +91,15 @@ export default function FloatingImageGallery() {
       </div>
       <div className={styles.title}>
         <h1>Other Passions & Interests</h1>
-        <p>Digital Art | Interior Design | Pool</p>
-        <p>Film | Speech/Public Speaking | Baking</p>
-        <p>Philosophy | Outdoor Volleyball | Cycling</p>
+        <p>Digital Art</p>
+        <p>Interior Design</p>
+        <p>Pool</p>
+        <p>Film</p>
+        <p>Speech/Public Speaking</p>
+        <p>Baking</p>
+        <p>Philosophy</p>
+        <p>Outdoor Volleyball</p>
+        <p>Cycling</p>
       </div>
     </main>
     </div>

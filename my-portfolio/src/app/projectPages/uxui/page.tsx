@@ -8,6 +8,8 @@ import { projects } from '@/dataUXUI';
 import { useScroll } from 'motion/react';
 import Lenis from '@studio-freight/lenis';
 
+import Inner from '@/components/transitionCurve';
+
 interface Project {
     title: string;
     description: string;
@@ -39,9 +41,10 @@ export default function UXUIPage(){
     }, []);
     
     return (
+      <Inner>
         <div ref={container} className="flex flex-col items-center justify-center min-h-screen max-w-screen">
             <section className="flex items-center justify-center min-h-screen">
-                <h1 className="text-center text-[220px] urbanistFont">
+                <h1 className="text-center text-[220px] aileronsFont">
                     UX/UI
                 </h1>
             </section>
@@ -61,5 +64,6 @@ export default function UXUIPage(){
     })};
             
         </div>
+        </Inner>
     );
 };

@@ -67,7 +67,7 @@ export default function DoubleImage({ projects, reversed = false, objectFit = 'c
     <div onMouseMove={manageMouseMove} className={styles.double}>
       <div ref={firstImage} className={styles.imageContainer}>
         <div className={styles.stretchyWrapper}>
-          <Image src={`/images/${projects[0].src}`} fill={true} alt="image" style={{ objectFit }}/>
+          <Image src={`/images/${projects[0].src}`} fill={true} alt="image" style={{ objectFit }} priority />
         </div>
         <div className={styles.body}>
           <h3 className='avenirNextFont'>{projects[0].name}</h3>
@@ -78,7 +78,7 @@ export default function DoubleImage({ projects, reversed = false, objectFit = 'c
 
       <div ref={secondImage} className={styles.imageContainer}>
         <div className={styles.stretchyWrapper}>
-          <Image src={`/images/${projects[1].src}`} fill={true} alt="image" style={{ objectFit }}/>
+          <Image src={`/images/${projects[1].src}`} fill={true} alt="image" style={{ objectFit }} priority />
         </div>
         <div className={styles.body}>
           <h3 className='avenirNextFont'>{projects[1].name}</h3>

@@ -1,51 +1,52 @@
 import { Variants } from "framer-motion";
 
-export const text: Variants = {
-  initial: {
-    opacity: 1,
-  },
-  enter: {
-    opacity: 0,
-    top: -100,
-    transition: { duration: 0.75, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
-    transitionEnd: { top: "47.5%" },
-  },
-  exit: {
-    opacity: 1,
-    top: "40%",
-    transition: { duration: 0.5, delay: 0.4, ease: [0.33, 1, 0.68, 1] },
-  },
-};
-
-export const curve = (initialPath: string, targetPath: string): Variants => {
-  return {
+export const perspective: Variants = {
     initial: {
-      d: initialPath,
+        scale: 1,
+        y: 0,
     },
     enter: {
-      d: targetPath,
-      transition: { duration: 0.75, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
+        scale: 1,
+        y: 0,
     },
     exit: {
-      d: initialPath,
-      transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
+        scale: 0.9,
+        y: -150,
+        opacity: 0.5,
+        transition: {
+            duration: 1.2,
+            ease: [0.76, 0, 0.24, 1],
+        },
     },
-  };
 };
 
-export const translate: Variants = {
-  initial: {
-    top: "-300px",
-  },
-  enter: {
-    top: "-100vh",
-    transition: { duration: 0.75, delay: 0.35, ease: [0.76, 0, 0.24, 1] },
-    transitionEnd: {
-      top: "100vh",
+export const slide: Variants = {
+    initial: {
+        y: "100vh",
     },
-  },
-  exit: {
-    top: "-300px",
-    transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
-  },
+    enter: {
+        y: "100vh",
+    },
+    exit: {
+        y: 0,
+        transition: {
+            duration: 1,
+            ease: [0.76, 0, 0.24, 1],
+        },
+    },
+};
+
+export const opacity: Variants = {
+    initial: {
+        opacity: 0,
+    },
+    enter: {
+        opacity: 1,
+        transition: {
+            duration: 1.5,
+        },
+    },
+    exit: {
+        opacity: 1,
+    },
 };

@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400&display=swap');
 
+@font-face {
+    font-family: 'Urbanist';
+    src: url('/src/fonts/Urbanist-VariableFont_wght.ttf') format('tff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 .cardImage {
     position: absolute;
     object-fit: cover;
@@ -34,24 +41,36 @@
     border-radius: 0px 0px 44px 44px;
     background-color: #3f4763;
     aspect-ratio: 16 / 9;
+    align-items: center;
+
+    .descriptionText {
+        text-align: left;
+        padding: 1.6rem;
+        position: relative;
+        display: flex;
+        color: rgb(255, 255, 255);
+        font-size: 1.7rem;
+        font-weight: 600;
+        font-family: "Urbanist";
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 24%;;
+      height: 3px; /* line thickness */
+      width: 90%;
+      background-color: #9FC3EE; /* gold/yellow */
+      left: 50%; /* Center horizontally */
+    transform: translateX(-50%); 
+    }
 }
 /*
 Original description section color: #5b5b5b
 */
 
-.barcodeTitle {
-    position: absolute;
-    text-align: right;
-    height: 3.86%;
-    width: 49.34%;
-    top: 94.28%;
-    right: 8%;
-    font-size: 2.4rem;
-    letter-spacing: 0.04em;
-    font-family: 'Libre Barcode 39 Text';
-    display: inline-block;
-    aspect-ratio: auto;
-}
+
 
 .rectangleParent {
     width: 100%;
@@ -63,5 +82,21 @@ Original description section color: #5b5b5b
     font-size: 128px;
     color: #fff;
     font-family: Kalam;
+
+    .barcodeTitle {
+        position: absolute;
+        text-align: right;
+        height: 3.86%;
+        width: 49.34%;
+        bottom: 1.0%;
+        right: 8%;
+        font-size: 2.3rem;
+        letter-spacing: 0.04em;
+        font-family: 'Libre Barcode 39 Text';
+        display: inline-block;
+        aspect-ratio: auto;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
 }
 

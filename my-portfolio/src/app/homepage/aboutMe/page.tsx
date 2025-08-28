@@ -1,37 +1,16 @@
 'use client';
 
 import styles from './page.module.scss';
-import { AnimatePresence, useScroll, useTransform, motion } from 'framer-motion';
-import React, { useState, useEffect, useRef } from 'react';
+import { useScroll, useTransform, motion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
 
 import Lenis from 'lenis';
 
-import Preloader from '@/components/preloaderCurve';
-
 import FloatingImageGallery from './floatingImageGallerySection/page';
 
+import Inner from '@/components/transitionCurve';
 
 export default function AmoutMePage(){
-
-    
-    /////   Preloader   ///// 
-    const preloadWords: string[] = ["About Me",];
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-      (async () => {
-        //const LocomotiveScroll = (await import('locomotive-scroll')).default;
-    
-        // Initialize LocomotiveScroll
-        //const locomotiveScroll = new LocomotiveScroll();
-    
-        setTimeout(() => {
-          setIsLoading(false); // Ensure `setIsLoading` is properly typed in your component
-          document.body.style.cursor = 'default';
-          window.scrollTo(0, 0);
-        }, 2000);
-      })();
-    }, []);
 
     /////  Framer Motion Scroll  ///// 
 
@@ -52,26 +31,24 @@ export default function AmoutMePage(){
         offset: ['start start', 'end start'],
     });
 
-    const y = useTransform(scrollYProgress, [0, 1], ['0vh', '160vh']);
+    const y = useTransform(scrollYProgress, [0, 1], ['0vh', '200vh']);
 
 
     return (
+      <Inner>
         <div className="flex flex-col items-center justify-center min-h-screen max-w-screen">
-            <AnimatePresence mode='wait'>
-                {isLoading && <Preloader words={preloadWords} />}
-            </AnimatePresence>
-
+            
             <div ref={container1} className="h-screen w-screen overflow-hidden">
                 <motion.div style={{ y }} className="relative h-full">
                   <img
-                    src="/images/OusmanLakePic1.png"
+                    src="/images/OusmanLakePic1.webp"
                     alt="image"
                     style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                   />
                 </motion.div>
             </div>
 
-            <section className="flex items-center justify-center min-h-screen">
+            <section className="flex items-center justify-center min-h-screen max-w-screen">
             <main className={styles.main}>
 
               <div className={styles.body}>
@@ -85,7 +62,7 @@ export default function AmoutMePage(){
 
               <div className={styles.imageContainer}>
                 <img
-                  src="/images/MeGradPic1.jpg" /* Replace with the correct image path */
+                  src="/images/MeGradPic1.webp" /* Replace with the correct image path */
                   alt="Me Grad Pic"
                 />
               </div>
@@ -94,6 +71,8 @@ export default function AmoutMePage(){
 
           
                 <FloatingImageGallery />
+                
         </div>
+        </Inner>
     );
 }
