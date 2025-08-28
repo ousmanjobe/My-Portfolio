@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 import Card from "@/components/pageCard";
 
-import imgSoftware from "/public/images/software.jpg";
-import imgArtwork from "/public/images/artwork.jpg";
-import imgUXUI1 from "/public/images/uxui.jpg";
+import imgSoftware from "/public/images/software.webp";
+import imgArtwork from "/public/images/artwork.webp";
+import imgUXUI1 from "/public/images/uxui.webp";
 
 import Inner from '@/components/transitionCurve';
 

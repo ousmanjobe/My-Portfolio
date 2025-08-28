@@ -1,13 +1,13 @@
 import { StaticImageData } from 'next/image';
 
-import floating1 from "/public/images/Baking.png";
-import floating2 from "/public/images/DigiArt1.png";
-import floating3 from "/public/images/InteriorDesign3.jpg";
-import floating4 from "/public/images/DigiArt3.png";
-import floating5 from "/public/images/Pool.png";
-import floating6 from "/public/images/DigiArt2.jpg";
-import floating7 from "/public/images/OutdoorVolleyball.jpg";
-import floating8 from "/public/images/Cycling.jpeg";
+import floating1 from "/public/images/Baking.webp";
+import floating2 from "/public/images/DigiArt1.webp";
+import floating3 from "/public/images/InteriorDesign3.webp";
+import floating4 from "/public/images/DigiArt3.webp";
+import floating5 from "/public/images/Pool.webp";
+import floating6 from "/public/images/DigiArt2.webp";
+import floating7 from "/public/images/OutdoorVolleyball.webp";
+import floating8 from "/public/images/Cycling.webp";
 
 const floating1Image: StaticImageData = floating1;
 const floating2Image: StaticImageData = floating2;

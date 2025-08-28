@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 import Card from "@/components/pageCard";
 
-import imgProjects from "/public/images/projects.jpg";
+import imgProjects from "/public/images/projects.webp";
 
-import imgMe2 from "/public/images/me2.jpg";
+import imgMe2 from "/public/images/me2.webp";
 
 import ScrambleText from '@/components/ScrambleText';
 

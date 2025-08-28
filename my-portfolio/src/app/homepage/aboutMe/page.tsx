@@ -41,7 +41,7 @@ export default function AmoutMePage(){
             <div ref={container1} className="h-screen w-screen overflow-hidden">
                 <motion.div style={{ y }} className="relative h-full">
                   <img
-                    src="/images/OusmanLakePic1.png"
+                    src="/images/OusmanLakePic1.webp"
                     alt="image"
                     style={{ objectFit: 'cover', width: '100%', height: '100%' }}
                   />
@@ -62,7 +62,7 @@ export default function AmoutMePage(){
 
               <div className={styles.imageContainer}>
                 <img
-                  src="/images/MeGradPic1.jpg" /* Replace with the correct image path */
+                  src="/images/MeGradPic1.webp" /* Replace with the correct image path */
                   alt="Me Grad Pic"
                 />
               </div>
