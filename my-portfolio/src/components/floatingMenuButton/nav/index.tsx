@@ -19,11 +19,11 @@ const navItems: NavItem[] = [
   },
   {
     title: "About Me",
-    href: "/homepage/aboutMe",
+    href: "/pages/aboutMe",
   },
   {
     title: "Projects",
-    href: "/homepage/projects",
+    href: "/pages/projects",
   },
   /*
   {
