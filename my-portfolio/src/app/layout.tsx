@@ -1,11 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-
 
 import "./globals.css";
 import FloatingMenuButton from "../components/floatingMenuButton";
-
-
 
 export const metadata: Metadata = {
   title: "Ousman Jobe",
