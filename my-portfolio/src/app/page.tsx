@@ -29,11 +29,11 @@ export default function TitlePage(){
           </section>
 
           <section className="flex flex-col lg:flex-row items-center lg:space-x-14 space-y-20 lg:space-y-0 justify-between min-h-screen">
-            <Link href="/homepage/aboutMe">
+            <Link href="/pages/aboutMe">
                 <Card imageSrc={imgMe2} description={aboutMeDescription} cardLabel="About Me" />
             </Link>
           
-            <Link href="/homepage/projects">
+            <Link href="/pages/projects">
                 <Card imageSrc={imgProjects} description={projectsDescription} cardLabel="Projects" />
             </Link>
           </section>

@@ -19,49 +19,49 @@
 
 @font-face {
   font-family: 'Ailerons';
-  src: url('/src/fonts/Ailerons-Typeface.otf') format('otf');
+  src: url('/Ailerons-Typeface.otf') format('otf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir Next';
-  src: url('/src/fonts/Avenir Next.ttc') format('truetype');
+  src: url('/Avenir Next.ttc') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir Next';
-  src: url('/src/fonts/Avenir Next.ttc') format('truetype');
+  src: url('/Avenir Next.ttc') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Urbanist';
-  src: url('/src/fonts/Urbanist-VariableFont_wght.ttf') format('tff');
+  src: url('/Urbanist-VariableFont_wght.ttf') format('tff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Urbanist-Italic';
-  src: url('/src/fonts/Urbanist-Italic-VariableFont_wght.ttf') format('tff');
+  src: url('/Urbanist-Italic-VariableFont_wght.ttf') format('tff');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Nagasaki';
-  src: url('/src/fonts/nagasaki.ttf') format('tff');
+  src: url('/nagasaki.ttf') format('tff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Dongpora';
-  src: url('/src/fonts/Dongpora-BF65c3a46d6cc22.otf') format('otf');
+  src: url('/Dongpora-BF65c3a46d6cc22.otf') format('otf');
   font-weight: bold;
   font-style: normal;
 }
