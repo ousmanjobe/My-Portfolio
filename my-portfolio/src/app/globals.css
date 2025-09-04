@@ -40,21 +40,21 @@
 
 @font-face {
   font-family: 'Urbanist';
-  src: url('/Urbanist-VariableFont_wght.ttf') format('tff');
+  src: url('/Urbanist-VariableFont_wght.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Urbanist-Italic';
-  src: url('/Urbanist-Italic-VariableFont_wght.ttf') format('tff');
+  src: url('/Urbanist-Italic-VariableFont_wght.ttf') format('ttf');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Nagasaki';
-  src: url('/nagasaki.ttf') format('tff');
+  src: url('/nagasaki.ttf') format('ttf');
   font-weight: normal;
   font-style: normal;
 }
