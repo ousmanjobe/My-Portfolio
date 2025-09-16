@@ -70,9 +70,9 @@ export default function DoubleImage({ projects, reversed = false, objectFit = 'c
           <Image src={`/images/${projects[0].src}`} fill={true} alt="image" style={{ objectFit }} priority />
         </div>
         <div className={styles.body}>
-          <h3 className='avenirNextFont'>{projects[0].name}</h3>
-          <p className='avenirNextFont'>{projects[0].description}</p>
-          <p className='avenirNextFont'>{projects[0].year}</p>
+          <h3 className='font-avenir font-bold'>{projects[0].name}</h3>
+          <p className='font-avenir'>{projects[0].description}</p>
+          <p className='font-avenir'>{projects[0].year}</p>
         </div>
       </div>
 
@@ -81,9 +81,9 @@ export default function DoubleImage({ projects, reversed = false, objectFit = 'c
           <Image src={`/images/${projects[1].src}`} fill={true} alt="image" style={{ objectFit }} priority />
         </div>
         <div className={styles.body}>
-          <h3 className='avenirNextFont'>{projects[1].name}</h3>
-          <p className='avenirNextFont'>{projects[1].description}</p>
-          <p className='avenirNextFont'>{projects[1].year}</p>
+          <h3 className='font-avenir font-bold'>{projects[1].name}</h3>
+          <p className='font-avenir'>{projects[1].description}</p>
+          <p className='font-avenir'>{projects[1].year}</p>
         </div>
       </div>
     </div>

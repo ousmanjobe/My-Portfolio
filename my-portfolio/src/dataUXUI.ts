@@ -9,8 +9,8 @@ export interface Project {
   export const projects: Project[] = [
     {
       title: "Portfolio Website (Fall 2024)",
-      description: "This is an interactive and aesthetically pleasing online portfolio consisting of my art and design projects as well as a means of accessing my software projects on GitHub. It includes information about myself, values, thought process, and sources of inspiration. My creative nature should be conveyed through the website’s design as well.",
-      src: "NextJS.webp",
+      description: "Lo-fi page designs for my portfolio. It includes the color scheme I intend to follow, typography, and hierarchy of information.",
+      src: "FigmaLogo.webp",
       url: "https://www.figma.com/design/xgRpBvNvnH6wh2m5dw3bao/Home-Page?node-id=0-1&t=GnhUBl9onKSVbvev-1",
       color: "#525B79",
     },

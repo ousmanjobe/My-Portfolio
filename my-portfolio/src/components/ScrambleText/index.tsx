@@ -73,7 +73,7 @@ const ScrambleText: React.FC<ScrambleTextProps> = ({ texts }) => {
     <div className={styles.textScrambleContent}>
       <p id="scramble-text-original">{texts.join(' ')}</p>
 
-      <p className={styles.textScrambleText} aria-hidden="true">
+      <p className={`${styles.textScrambleText} font-ailerons`} aria-hidden="true">
         {texts.map((_, index) => (
           <span key={index} id={`scramble-text-${index + 1}`}></span>
         ))}

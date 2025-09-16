@@ -42,7 +42,7 @@ export default function SoftwarePage(){
         <div ref={container} className="flex flex-col items-center justify-center min-h-screen max-w-screen">
           <Inner>
             <section className="flex items-center justify-center min-h-screen">
-                <h1 className="text-center text-[220px] aileronsFont">
+                <h1 className="text-center text-[220px] font-ailerons">
                     SOFTWARE
                 </h1>
             </section>

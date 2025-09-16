@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 import Card from "@/components/pageCard";
 
-import imgSoftware from "/public/images/software.webp";
-import imgArtwork from "/public/images/artwork.webp";
+import imgSoftware from "/public/images/githubLogo2.webp";
+import imgArtwork from "/public/images/artwork1.webp";
 import imgUXUI1 from "/public/images/uxui.webp";
 
 import Inner from '@/components/transitionCurve';
