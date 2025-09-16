@@ -44,7 +44,7 @@ export default function UXUIPage(){
       <Inner>
         <div ref={container} className="flex flex-col items-center justify-center min-h-screen max-w-screen">
             <section className="flex items-center justify-center min-h-screen">
-                <h1 className="text-center text-[220px] aileronsFont">
+                <h1 className="text-center text-[220px] font-ailerons">
                     UX/UI
                 </h1>
             </section>

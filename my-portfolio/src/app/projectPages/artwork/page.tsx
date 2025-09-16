@@ -82,17 +82,17 @@ export default function ArtworkPage(){
       <Inner>
         <div className="flex flex-col items-center justify-center min-h-screen max-w-screen">
             <section className="flex items-center justify-center min-h-screen">
-                <h1 className="text-center text-[220px] aileronsFont">
+                <h1 className="text-center text-[220px] font-ailerons">
                     ARTWORK
                 </h1>
             </section>
             <section className={styles.main}>
                 <section>
-                    <h1 className='urbanistFont'>
+                    <h1 className='font-urbanist'>
                         Famous Artwork Recreations
                     </h1>
 
-                    <h2 className='urbanistFont'>
+                    <h2 className='font-urbanist'>
                         Used a 2B pencil and 9x12 paper to draw pieces I found in Boston&apos;s Museum of Fine Arts, spending 30 minutes on each. My goal was to notice and account for as much detail as each artist included in order to acquire their lenses when depicting depth and texture.
                     </h2>
                     <div className={styles.margin}>
@@ -102,7 +102,7 @@ export default function ArtworkPage(){
                 </section>
 
                 <section>
-                    <h1 className='urbanistFont'>
+                    <h1 className='font-urbanist'>
                         Graphic Novel <br></br>Concept Art
                     </h1>
 
@@ -114,7 +114,7 @@ export default function ArtworkPage(){
                     </div>
 
                     <div className={styles.main}>
-                    <h2 className='urbanistFont'>
+                    <h2 className='font-urbanist'>
                         I have been developing a graphic novel with a story focused on showcasing mental health struggles, addressing the crucial nature of having faith in yourself, and building the courage to rely on others during desperate times.
                         <br />
                         <br />

@@ -59,12 +59,12 @@ const Card: React.FC<CardProps> = ({ imageSrc, cardLabel, description, width, he
                     />
                 </div>
       			<div className={styles.descriptionSection}>
-					<div className={styles.descriptionText}>
+					<div className={`${styles.descriptionText} font-urbanist`}>
 						{description}
 					</div>
 				</div>
 				
-      			<div className={styles.barcodeTitle}>{ cardLabel }</div>
+      			<div className={`${styles.barcodeTitle} font-barcode`}>{ cardLabel }</div>
     		</div>
         </Tilt>
         </div>
