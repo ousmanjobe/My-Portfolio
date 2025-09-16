@@ -26,19 +26,19 @@ interface Dimension {
 
 export default function ArtworkPage(){
     const images = [
-        'Poster1.png',
-        'Poster3.PNG',
-        'CoverArt1.PNG',
-        'CoverArt2.PNG',
-        'CoverArt3.PNG',
-        'Poster2.PNG',
-        'CoverArt4.PNG',
-        'CharacterDesign1.jpg',
-        'CharacterDesign2.jpg',
-        'CharacterDesign3.jpg',
-        'CharacterDesign4.png',
-        'Poster4.jpg',
-        'PosterArt3v1.jpg'
+        'Poster1.webp',
+        'Poster3.webp',
+        'CoverArt1.webp',
+        'CoverArt2.webp',
+        'CoverArt3.webp',
+        'Poster2.webp',
+        'CoverArt4.webp',
+        'CharacterDesign1.webp',
+        'CharacterDesign2.webp',
+        'CharacterDesign3.webp',
+        'CharacterDesign4.webp',
+        'Poster4.webp',
+        'PosterArt3v1.webp'
       ];
 
     // Smooth Vertical Parallax Image Scroll Gallery
