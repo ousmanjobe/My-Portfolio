@@ -89,7 +89,7 @@ export default function FloatingImageGallery() {
         <Image src={floating5} alt="image" width={250} />
         <Image src={floating3} alt="image" width={200} />
       </div>
-      <div className={styles.title}>
+      <div className={`${styles.title} font-urbanist`}>
         <h1>Other Passions & Interests</h1>
         <p>Digital Art</p>
         <p>Interior Design</p>

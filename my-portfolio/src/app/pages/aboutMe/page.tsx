@@ -51,7 +51,7 @@ export default function AmoutMePage(){
             <section className="flex items-center justify-center min-h-screen max-w-screen">
             <main className={styles.main}>
 
-              <div className={styles.body}>
+              <div className={`${styles.body} font-urbanist`}>
               <p>
               I&apos;m a Designer & Developer, passionate about creating unique digital experiences with the promise of beauty, simplicity, and efficiency. My pursuit began in middle school when I made a fun personal website for the shows and movies I watched.
                 <br />
