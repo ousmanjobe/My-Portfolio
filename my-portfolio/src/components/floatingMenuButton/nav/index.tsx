@@ -45,8 +45,8 @@ export default function Index() {
   return (
     <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className={styles.menu}>
       <div className={styles.body}>
-        <div onMouseLeave={() => setSelectedIndicator(pathname)} className={`${styles.nav} font-urbanist`}>
-          <div className={styles.header}>
+        <div onMouseLeave={() => setSelectedIndicator(pathname)} className={styles.nav}>
+          <div className={`${styles.header} font-urbanist`}>
             <p>Navigation</p>
           </div>
           {navItems.map((data, index) => (
