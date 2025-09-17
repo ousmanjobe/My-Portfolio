@@ -39,7 +39,7 @@ export default function Index({ data, isActive, setSelectedIndicator }: Props) {
         animate={isActive ? 'open' : 'closed'}
         className={styles.indicator}
       ></motion.div>
-      <Link href={href}>{title}</Link>
+      <Link href={href} className='font-urbanist'>{title}</Link>
     </motion.div>
   );
 }
