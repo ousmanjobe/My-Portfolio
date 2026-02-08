@@ -11,7 +11,7 @@ import Inner from '@/components/transitionCurve';
 
 export default function ProjectsPage(){
 
-    const uxuiDescription = "Access several of my UX/UI projects over recent years";
+    const uxuiDescription = "Access several of my UX/UI and graphic design projects over recent years";
     const softwareDescription = "Access several of my software projects over recent years";
     const artworkDescription = "Access several of my art projects over recent years";
 
@@ -23,8 +23,8 @@ export default function ProjectsPage(){
                 <div>
                     <div className="flex flex-col lg:flex-row items-center lg:space-x-8 space-y-20 lg:space-y-0 justify-between min-h-screen">
                         <div>
-                            <Link href="/projectPages/uxui">
-                                <Card imageSrc={imgUXUI1} description={uxuiDescription} cardLabel="UX/UI" />
+                            <Link href="/projectPages/design">
+                                <Card imageSrc={imgUXUI1} description={uxuiDescription} cardLabel="Design" />
                             </Link>
                         </div>
                         <div>
