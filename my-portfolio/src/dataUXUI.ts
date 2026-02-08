@@ -8,6 +8,13 @@ export interface Project {
   
   export const projects: Project[] = [
     {
+      title: "Promotional Marketing Capstone (Spring 2025)",
+      description: "A promotional marketing strategy proposal for a graphic novel titled \"Courtside\". The marketing strategy was designed with the goals of increasing franchise/brand awareness and driving initial sales",
+      src: "CapstoneCover.webp",
+      url: "https://docs.google.com/presentation/d/1X62WkSmkqJ-0fnY-BbzUqtkQI1FJ_-cMRIkKTBtoqbw/edit?usp=sharing",
+      color: "#CDAED1",
+    },
+    {
       title: "Portfolio Website (Fall 2024)",
       description: "Lo-fi page designs for my portfolio. It includes the color scheme I intend to follow, typography, and hierarchy of information.",
       src: "FigmaLogo.webp",
