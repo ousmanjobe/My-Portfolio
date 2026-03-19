@@ -29,13 +29,6 @@ export interface Project {
       color: "#8690B9",
     },
     {
-      title: "Tryout (Fall 2023)",
-      description: "Tryout is a mobile app designed to estimate travel time on a MBTA’s mode of transit and suggest social or personal care activities to engage in while on the move. Passengers can collect points through user-to-user confirmation to win travel prizes.",
-      src: "TryoutCoverImage.webp",
-      url: "https://www.figma.com/design/LH7fgQmEPZWXfv4iVutq28/Tryout-App?node-id=23-977&t=02ZPs62AzYvygG6v-1",
-      color: "#9FC3EE",
-    },
-    {
       title: "Northeastern University Student Hub Redesign (Fall 2022)",
       description: "A web redesign of Northeastern University's Student Hub, with more appealing aesthetics, the removal of unnecessary content, less misleading web directions, and easier accessibility features such as a pinned links panel.",
       src: "HubRedesignCover.webp",
